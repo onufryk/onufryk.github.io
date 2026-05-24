@@ -4,7 +4,7 @@ Guidance for AI assistants working in this repository.
 
 ## Project overview
 
-Static personal site published via [GitHub Pages](https://pages.github.com/) at `https://onufryk.github.io/`. It is a photo catalog of a Rubik’s-cube collection (“Маркові кубики Рубика”) — one HTML page with a table of images, names, and short descriptions in Ukrainian.
+Static personal site published via [GitHub Pages](https://pages.github.com/) at `https://onufryk.github.io/`. It is a photo catalog of a Rubik’s-cube collection (“Маркові кубики Рубика”) — one HTML page with stacked cards (image, name, description) in Ukrainian.
 
 There is no build step, package manager, framework source, or test suite. Changes are plain HTML/CSS assets committed to `main` and deployed automatically by GitHub Pages.
 
@@ -25,7 +25,7 @@ There is no build step, package manager, framework source, or test suite. Change
 ## Tech stack
 
 - **HTML5** — single page, hand-edited
-- **Tailwind CSS** — loaded via Play CDN (`https://cdn.tailwindcss.com`); no build step
+- **Tailwind CSS** — Play CDN with inline `tailwind.config` (cube palette, Fredoka/Nunito via Google Fonts); no build step
 - **Images** — JPEG in `img/`, referenced from table rows
 
 Do not introduce Node, bundlers, or a static-site generator unless the owner explicitly asks for that migration.
@@ -33,26 +33,28 @@ Do not introduce Node, bundlers, or a static-site generator unless the owner exp
 ## Adding or updating a cube entry
 
 1. Add the photo under `img/`. Use the next sequential number (`014.jpg`) or `NNN-shortname.jpg` if the name helps (see `012-mirror.jpg`, `013-gear.jpg`).
-2. In `index.html`, append a `<tr>` inside the table (after existing rows, before `</table>`):
+2. In `index.html`, append an `<article>` inside `<main class="space-y-6">` (copy an existing card and adjust paths/text). Cycle `ring-cube-*` accent colors (red → blue → green → yellow → orange).
 
 ```html
-<tr>
-  <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/014.jpg"><img src="img/014.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
-  <td class="border border-gray-300 px-2 py-1 align-top">Product name</td>
-  <td class="border border-gray-300 px-2 py-1 align-top">Короткий опис українською</td>
-</tr>
+<article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
+  <a href="img/014.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-red/30 transition group-hover:ring-cube-red/60">
+    <img src="img/014.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Product name" />
+  </a>
+  <div class="min-w-0 flex-1">
+    <h2 class="font-display text-2xl font-semibold text-slate-900">Product name</h2>
+    <p class="mt-2 text-slate-600 leading-relaxed">Короткий опис українською</p>
+  </div>
+</article>
 ```
 
-3. Keep column order: **Фото** | **Назва** | **Подробиці**.
-4. Append rows inside `<tbody>`. Use the same cell classes as existing rows. Linked thumbnails open the full image; optional `<b>NEW!!!</b>` for highlights (used sparingly).
-
-Row order in the table is presentation order, not numeric file order (e.g. `005` and `006` rows are swapped relative to filenames).
+3. For new highlights, use the amber card variant and a `<span class="...">NEW</span>` badge (see Mirror Cube / Gear Cube entries).
+4. Card order is presentation order, not numeric file order (e.g. `005` and `006` are swapped relative to filenames).
 
 ## Content and language
 
 - UI strings, captions, and descriptions are **Ukrainian**.
 - Product names may mix English brand names with Ukrainian text (e.g. `Rubik's Cube`, `Кубик Рубика`).
-- `<html lang="en">` is set on pages; do not change language attributes unless aligning them with content is intentional.
+- `<html lang="uk">` on the main page; do not change language attributes without reason.
 
 ## Images
 
@@ -70,7 +72,7 @@ To preview locally, open `index.html` in a browser or serve the repo root with a
 ## Conventions for edits
 
 - **Minimize scope** — this is a one-page site; prefer editing `index.html` and adding one image over new abstractions.
-- **Preserve table layout** — bordered table inside `overflow-x-auto`, shared `border border-gray-300 px-2 py-1 align-top` on body cells, and `<caption class="caption-top mb-4 text-lg font-semibold">`.
+- **Preserve card layout** — copy an existing `<article>` block; keep playful styling (rounded cards, cube-colored rings, hover lift) consistent with neighbors.
 - **Tailwind CDN** — styling is utility classes in HTML; no separate CSS file unless the owner adds a build pipeline.
 - **Commits** — only create git commits when the user explicitly asks.
 - **No README** — there is no project README; do not add one unless requested.
@@ -87,6 +89,6 @@ To preview locally, open `index.html` in a browser or serve the repo root with a
 | Task | Where to change |
 |------|-----------------|
 | New cube | `img/*.jpg` + new `<tr>` in `index.html` |
-| Page title / caption | `<title>`, `<caption>` in `index.html` |
-| Styling | Tailwind utility classes on table elements; avoid new CSS files unless needed |
+| Page title / heading | `<title>`, `<h1>` in `index.html` |
+| Styling | Tailwind utilities + inline `tailwind.config`; minimal extra CSS in `<style>` only when needed |
 | Block directory listing | `img/index.html` |

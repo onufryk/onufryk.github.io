@@ -1,91 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="UTF-8" />
   <title>Маркові кубики Рубика</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="" />
+  <meta name="description" content="Колекція кубиків Рубика — фото, назви та описи." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Fredoka', 'system-ui', 'sans-serif'],
+            body: ['Nunito', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            cube: {
+              red: '#e11d48',
+              blue: '#2563eb',
+              green: '#16a34a',
+              yellow: '#eab308',
+              orange: '#ea580c',
+              white: '#f8fafc',
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(12deg); }
+      50% { transform: translateY(-8px) rotate(12deg); }
+    }
+    .cube-float { animation: float 4s ease-in-out infinite; }
+    .cube-float-delay { animation-delay: 1.2s; }
+  </style>
 </head>
-<body class="bg-white p-4 text-gray-900">
-  <div class="overflow-x-auto">
-    <table class="w-full border-collapse border border-gray-300 text-sm">
-      <caption class="caption-top mb-4 text-lg font-semibold">Маркові кубики Рубика</caption>
-      <thead class="bg-gray-100">
-        <tr>
-          <th class="border border-gray-300 px-3 py-2 text-left font-semibold">Фото</th>
-          <th class="border border-gray-300 px-3 py-2 text-left font-semibold">Назва</th>
-          <th class="border border-gray-300 px-3 py-2 text-left font-semibold">Подробиці</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/001.jpg"><img src="img/001.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Rubik's Mini</td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Зменшений кубик Рубика 2x2</td>
-        </tr>
-        <tr>
-          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/002.jpg"><img src="img/002.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Кубик Рубика (Rubik's Cube)</td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Стандартний кубик Рубика 3x3</td>
-        </tr>
-        <tr>
-          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/003.jpg"><img src="img/003.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Кубик Рубика (Rubik's Sensory Cube)</td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Стандартний кубик Рубика 3x3 із рельєфними поверхнями</td>
-        </tr>
-        <tr>
-          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/004.jpg"><img src="img/004.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Rubik's Master</td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Кубик Рубика 4x4</td>
-        </tr>
-        <tr>
-          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/006.jpg"><img src="img/006.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Rubik's Professor</td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Кубик Рубика 5x5</td>
-        </tr>
-        <tr>
-          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/005.jpg"><img src="img/005.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Піраміда Рубика (Rubik's Pyramid)</td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Піраміда Рубика</td>
-        </tr>
-        <tr>
-          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/007.jpg"><img src="img/007.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Windmill Cube</td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Кубик стандартного розміру із модифікованими елементами</td>
-        </tr>
-        <tr>
-          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/008.jpg"><img src="img/008.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Skewb Cube</td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Кубик стандартного розміру із модифікованими елементами</td>
-        </tr>
-        <tr>
-          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/009.jpg"><img src="img/009.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Axis Cube</td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Кубик стандартного розміру із модифікованими елементами</td>
-        </tr>
-        <tr>
-          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/010.jpg"><img src="img/010.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Megaminx</td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Головоломка у формі додекаедра</td>
-        </tr>
-        <tr>
-          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/012-mirror.jpg"><img src="img/012-mirror.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Mirror Cube <b>NEW!!!</b></td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Дзеркальний кубик</td>
-        </tr>
-        <tr>
-          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/013-gear.jpg"><img src="img/013-gear.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Gear Cube <b>NEW!!!</b></td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Шестеренчатий куб</td>
-        </tr>
-        <tr>
-          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/011.jpg"><img src="img/011.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Rubik's Keychain</td>
-          <td class="border border-gray-300 px-2 py-1 align-top">Кубик Рубика 3x3 у вигляді брелка. Дуже швидко ламаються або губляться.</td>
-        </tr>
-      </tbody>
-    </table>
+<body class="min-h-screen bg-gradient-to-br from-violet-100 via-sky-50 to-amber-100 font-body text-slate-800 antialiased">
+  <div class="pointer-events-none fixed inset-0 overflow-hidden" aria-hidden="true">
+    <div class="cube-float absolute -left-4 top-24 h-14 w-14 rounded-xl bg-cube-red shadow-lg"></div>
+    <div class="cube-float cube-float-delay absolute right-8 top-40 h-10 w-10 rounded-lg bg-cube-blue shadow-md"></div>
+    <div class="cube-float absolute bottom-32 left-1/4 h-8 w-8 rounded-md bg-cube-green shadow-md" style="animation-delay: 2s;"></div>
+    <div class="cube-float absolute right-1/4 top-1/3 h-12 w-12 rounded-xl bg-cube-yellow shadow-lg" style="animation-delay: 0.6s;"></div>
+    <div class="cube-float absolute bottom-48 right-12 h-9 w-9 rounded-lg bg-cube-orange shadow-md" style="animation-delay: 1.8s;"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-4xl px-4 py-10 sm:px-6 sm:py-14">
+    <header class="mb-10 text-center sm:mb-14">
+      <div class="mb-4 flex justify-center gap-2" aria-hidden="true">
+        <span class="h-4 w-4 rounded-sm bg-cube-red shadow-sm"></span>
+        <span class="h-4 w-4 rounded-sm bg-cube-blue shadow-sm"></span>
+        <span class="h-4 w-4 rounded-sm bg-cube-green shadow-sm"></span>
+        <span class="h-4 w-4 rounded-sm bg-cube-yellow shadow-sm"></span>
+        <span class="h-4 w-4 rounded-sm bg-cube-orange shadow-sm"></span>
+        <span class="h-4 w-4 rounded-sm border-2 border-slate-300 bg-white shadow-sm"></span>
+      </div>
+      <h1 class="font-display text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+        Маркові кубики Рубика
+      </h1>
+    </header>
+
+    <main class="space-y-6">
+      <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
+        <a href="img/001.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-red/30 transition group-hover:ring-cube-red/60">
+          <img src="img/001.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Rubik's Mini" />
+        </a>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-display text-2xl font-semibold text-slate-900">Rubik's Mini</h2>
+          <p class="mt-2 text-slate-600 leading-relaxed">Зменшений кубик Рубика 2x2</p>
+        </div>
+      </article>
+
+      <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
+        <a href="img/002.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-blue/30 transition group-hover:ring-cube-blue/60">
+          <img src="img/002.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Кубик Рубика" />
+        </a>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-display text-2xl font-semibold text-slate-900">Кубик Рубика (Rubik's Cube)</h2>
+          <p class="mt-2 text-slate-600 leading-relaxed">Стандартний кубик Рубика 3x3</p>
+        </div>
+      </article>
+
+      <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
+        <a href="img/003.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-green/30 transition group-hover:ring-cube-green/60">
+          <img src="img/003.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Rubik's Sensory Cube" />
+        </a>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-display text-2xl font-semibold text-slate-900">Кубик Рубика (Rubik's Sensory Cube)</h2>
+          <p class="mt-2 text-slate-600 leading-relaxed">Стандартний кубик Рубика 3x3 із рельєфними поверхнями</p>
+        </div>
+      </article>
+
+      <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
+        <a href="img/004.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-yellow/40 transition group-hover:ring-cube-yellow/70">
+          <img src="img/004.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Rubik's Master" />
+        </a>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-display text-2xl font-semibold text-slate-900">Rubik's Master</h2>
+          <p class="mt-2 text-slate-600 leading-relaxed">Кубик Рубика 4x4</p>
+        </div>
+      </article>
+
+      <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
+        <a href="img/006.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-orange/30 transition group-hover:ring-cube-orange/60">
+          <img src="img/006.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Rubik's Professor" />
+        </a>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-display text-2xl font-semibold text-slate-900">Rubik's Professor</h2>
+          <p class="mt-2 text-slate-600 leading-relaxed">Кубик Рубика 5x5</p>
+        </div>
+      </article>
+
+      <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
+        <a href="img/005.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-red/30 transition group-hover:ring-cube-red/60">
+          <img src="img/005.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Піраміда Рубика" />
+        </a>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-display text-2xl font-semibold text-slate-900">Піраміда Рубика (Rubik's Pyramid)</h2>
+          <p class="mt-2 text-slate-600 leading-relaxed">Піраміда Рубика</p>
+        </div>
+      </article>
+
+      <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
+        <a href="img/007.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-blue/30 transition group-hover:ring-cube-blue/60">
+          <img src="img/007.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Windmill Cube" />
+        </a>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-display text-2xl font-semibold text-slate-900">Windmill Cube</h2>
+          <p class="mt-2 text-slate-600 leading-relaxed">Кубик стандартного розміру із модифікованими елементами</p>
+        </div>
+      </article>
+
+      <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
+        <a href="img/008.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-green/30 transition group-hover:ring-cube-green/60">
+          <img src="img/008.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Skewb Cube" />
+        </a>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-display text-2xl font-semibold text-slate-900">Skewb Cube</h2>
+          <p class="mt-2 text-slate-600 leading-relaxed">Кубик стандартного розміру із модифікованими елементами</p>
+        </div>
+      </article>
+
+      <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
+        <a href="img/009.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-yellow/40 transition group-hover:ring-cube-yellow/70">
+          <img src="img/009.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Axis Cube" />
+        </a>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-display text-2xl font-semibold text-slate-900">Axis Cube</h2>
+          <p class="mt-2 text-slate-600 leading-relaxed">Кубик стандартного розміру із модифікованими елементами</p>
+        </div>
+      </article>
+
+      <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
+        <a href="img/010.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-orange/30 transition group-hover:ring-cube-orange/60">
+          <img src="img/010.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Megaminx" />
+        </a>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-display text-2xl font-semibold text-slate-900">Megaminx</h2>
+          <p class="mt-2 text-slate-600 leading-relaxed">Головоломка у формі додекаедра</p>
+        </div>
+      </article>
+
+      <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-amber-200/80 bg-gradient-to-br from-white to-amber-50/90 p-5 shadow-lg shadow-amber-200/60 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-300/50 sm:flex-row sm:items-start sm:p-6">
+        <a href="img/012-mirror.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-amber-400/50 transition group-hover:ring-amber-400">
+          <img src="img/012-mirror.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Mirror Cube" />
+        </a>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-display text-2xl font-semibold text-slate-900">
+            Mirror Cube
+            <span class="ml-2 inline-block rounded-full bg-gradient-to-r from-amber-400 to-orange-400 px-3 py-0.5 text-sm font-bold text-white shadow-sm">NEW</span>
+          </h2>
+          <p class="mt-2 text-slate-600 leading-relaxed">Дзеркальний кубик</p>
+        </div>
+      </article>
+
+      <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-amber-200/80 bg-gradient-to-br from-white to-amber-50/90 p-5 shadow-lg shadow-amber-200/60 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-300/50 sm:flex-row sm:items-start sm:p-6">
+        <a href="img/013-gear.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-amber-400/50 transition group-hover:ring-amber-400">
+          <img src="img/013-gear.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Gear Cube" />
+        </a>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-display text-2xl font-semibold text-slate-900">
+            Gear Cube
+            <span class="ml-2 inline-block rounded-full bg-gradient-to-r from-amber-400 to-orange-400 px-3 py-0.5 text-sm font-bold text-white shadow-sm">NEW</span>
+          </h2>
+          <p class="mt-2 text-slate-600 leading-relaxed">Шестеренчатий куб</p>
+        </div>
+      </article>
+
+      <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
+        <a href="img/011.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-slate-300/50 transition group-hover:ring-slate-400">
+          <img src="img/011.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Rubik's Keychain" />
+        </a>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-display text-2xl font-semibold text-slate-900">Rubik's Keychain</h2>
+          <p class="mt-2 text-slate-600 leading-relaxed">Кубик Рубика 3x3 у вигляді брелка. Дуже швидко ламаються або губляться.</p>
+        </div>
+      </article>
+    </main>
   </div>
 </body>
 </html>
