@@ -26,18 +26,19 @@ There is no build step, package manager, framework source, or test suite. Change
 
 - **HTML5** — single page, hand-edited
 - **Tailwind CSS** — Play CDN with inline `tailwind.config` (cube palette, Fredoka/Nunito via Google Fonts); no build step
-- **Images** — JPEG in `img/`, referenced from table rows
+- **Lightbox2 2.11.5** — image preview overlay (requires jQuery); all cube photos share `data-lightbox="cubes"`
+- **Images** — JPEG in `img/`, linked from card thumbnails
 
 Do not introduce Node, bundlers, or a static-site generator unless the owner explicitly asks for that migration.
 
 ## Adding or updating a cube entry
 
 1. Add the photo under `img/`. Use the next sequential number (`014.jpg`) or `NNN-shortname.jpg` if the name helps (see `012-mirror.jpg`, `013-gear.jpg`).
-2. In `index.html`, append an `<article>` inside `<main class="space-y-6">` (copy an existing card and adjust paths/text). Cycle `ring-cube-*` accent colors (red → blue → green → yellow → orange).
+2. In `index.html`, append an `<article>` inside `<main class="space-y-6">` for Rubik-brand puzzles, or inside the bottom `<section aria-labelledby="non-rubik-heading">` for non-Rubik toys. Copy an existing card and adjust paths/text. Cycle `ring-cube-*` accent colors (red → blue → green → yellow → orange).
 
 ```html
 <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
-  <a href="img/014.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-red/30 transition group-hover:ring-cube-red/60">
+  <a href="img/014.jpg" data-lightbox="cubes" data-title="Product name" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-red/30 transition group-hover:ring-cube-red/60">
     <img src="img/014.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Product name" />
   </a>
   <div class="min-w-0 flex-1">

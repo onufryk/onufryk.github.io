@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -66,7 +67,7 @@
 
     <main class="space-y-6">
       <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
-        <a href="img/001.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-red/30 transition group-hover:ring-cube-red/60">
+        <a href="img/001.jpg" data-lightbox="cubes" data-title="Rubik's Mini" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-red/30 transition group-hover:ring-cube-red/60">
           <img src="img/001.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Rubik's Mini" />
         </a>
         <div class="min-w-0 flex-1">
@@ -76,7 +77,7 @@
       </article>
 
       <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
-        <a href="img/002.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-blue/30 transition group-hover:ring-cube-blue/60">
+        <a href="img/002.jpg" data-lightbox="cubes" data-title="Кубик Рубика (Rubik's Cube)" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-blue/30 transition group-hover:ring-cube-blue/60">
           <img src="img/002.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Кубик Рубика" />
         </a>
         <div class="min-w-0 flex-1">
@@ -86,7 +87,7 @@
       </article>
 
       <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
-        <a href="img/003.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-green/30 transition group-hover:ring-cube-green/60">
+        <a href="img/003.jpg" data-lightbox="cubes" data-title="Кубик Рубика (Rubik's Sensory Cube)" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-green/30 transition group-hover:ring-cube-green/60">
           <img src="img/003.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Rubik's Sensory Cube" />
         </a>
         <div class="min-w-0 flex-1">
@@ -96,7 +97,7 @@
       </article>
 
       <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
-        <a href="img/004.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-yellow/40 transition group-hover:ring-cube-yellow/70">
+        <a href="img/004.jpg" data-lightbox="cubes" data-title="Rubik's Master" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-yellow/40 transition group-hover:ring-cube-yellow/70">
           <img src="img/004.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Rubik's Master" />
         </a>
         <div class="min-w-0 flex-1">
@@ -106,7 +107,7 @@
       </article>
 
       <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
-        <a href="img/006.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-orange/30 transition group-hover:ring-cube-orange/60">
+        <a href="img/006.jpg" data-lightbox="cubes" data-title="Rubik's Professor" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-orange/30 transition group-hover:ring-cube-orange/60">
           <img src="img/006.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Rubik's Professor" />
         </a>
         <div class="min-w-0 flex-1">
@@ -116,7 +117,7 @@
       </article>
 
       <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
-        <a href="img/005.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-red/30 transition group-hover:ring-cube-red/60">
+        <a href="img/005.jpg" data-lightbox="cubes" data-title="Піраміда Рубика (Rubik's Pyramid)" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-red/30 transition group-hover:ring-cube-red/60">
           <img src="img/005.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Піраміда Рубика" />
         </a>
         <div class="min-w-0 flex-1">
@@ -126,7 +127,7 @@
       </article>
 
       <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
-        <a href="img/007.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-blue/30 transition group-hover:ring-cube-blue/60">
+        <a href="img/007.jpg" data-lightbox="cubes" data-title="Windmill Cube" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-blue/30 transition group-hover:ring-cube-blue/60">
           <img src="img/007.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Windmill Cube" />
         </a>
         <div class="min-w-0 flex-1">
@@ -136,7 +137,7 @@
       </article>
 
       <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
-        <a href="img/008.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-green/30 transition group-hover:ring-cube-green/60">
+        <a href="img/008.jpg" data-lightbox="cubes" data-title="Skewb Cube" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-green/30 transition group-hover:ring-cube-green/60">
           <img src="img/008.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Skewb Cube" />
         </a>
         <div class="min-w-0 flex-1">
@@ -146,7 +147,7 @@
       </article>
 
       <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
-        <a href="img/009.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-yellow/40 transition group-hover:ring-cube-yellow/70">
+        <a href="img/009.jpg" data-lightbox="cubes" data-title="Axis Cube" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-yellow/40 transition group-hover:ring-cube-yellow/70">
           <img src="img/009.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Axis Cube" />
         </a>
         <div class="min-w-0 flex-1">
@@ -156,7 +157,7 @@
       </article>
 
       <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
-        <a href="img/010.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-orange/30 transition group-hover:ring-cube-orange/60">
+        <a href="img/010.jpg" data-lightbox="cubes" data-title="Megaminx" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-orange/30 transition group-hover:ring-cube-orange/60">
           <img src="img/010.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Megaminx" />
         </a>
         <div class="min-w-0 flex-1">
@@ -166,33 +167,47 @@
       </article>
 
       <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-amber-200/80 bg-gradient-to-br from-white to-amber-50/90 p-5 shadow-lg shadow-amber-200/60 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-300/50 sm:flex-row sm:items-start sm:p-6">
-        <a href="img/012-mirror.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-amber-400/50 transition group-hover:ring-amber-400">
+        <a href="img/012-mirror.jpg" data-lightbox="cubes" data-title="Mirror Cube" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-amber-400/50 transition group-hover:ring-amber-400">
           <img src="img/012-mirror.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Mirror Cube" />
         </a>
         <div class="min-w-0 flex-1">
-          <h2 class="font-display text-2xl font-semibold text-slate-900">
-            Mirror Cube
-            <span class="ml-2 inline-block rounded-full bg-gradient-to-r from-amber-400 to-orange-400 px-3 py-0.5 text-sm font-bold text-white shadow-sm">NEW</span>
-          </h2>
+          <h2 class="font-display text-2xl font-semibold text-slate-900">Mirror Cube</h2>
           <p class="mt-2 text-slate-600 leading-relaxed">Дзеркальний кубик</p>
         </div>
       </article>
 
       <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-amber-200/80 bg-gradient-to-br from-white to-amber-50/90 p-5 shadow-lg shadow-amber-200/60 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-300/50 sm:flex-row sm:items-start sm:p-6">
-        <a href="img/013-gear.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-amber-400/50 transition group-hover:ring-amber-400">
+        <a href="img/013-gear.jpg" data-lightbox="cubes" data-title="Gear Cube" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-amber-400/50 transition group-hover:ring-amber-400">
           <img src="img/013-gear.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Gear Cube" />
         </a>
         <div class="min-w-0 flex-1">
-          <h2 class="font-display text-2xl font-semibold text-slate-900">
-            Gear Cube
-            <span class="ml-2 inline-block rounded-full bg-gradient-to-r from-amber-400 to-orange-400 px-3 py-0.5 text-sm font-bold text-white shadow-sm">NEW</span>
-          </h2>
+          <h2 class="font-display text-2xl font-semibold text-slate-900">Gear Cube</h2>
           <p class="mt-2 text-slate-600 leading-relaxed">Шестеренчатий куб</p>
         </div>
       </article>
 
       <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
-        <a href="img/011.jpg" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-slate-300/50 transition group-hover:ring-slate-400">
+        <a href="img/014-phantom.jpg" data-lightbox="cubes" data-title="Phantom Cube" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-red/30 transition group-hover:ring-cube-red/60">
+          <img src="img/014-phantom.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Phantom Cube" />
+        </a>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-display text-2xl font-semibold text-slate-900">Phantom Cube</h2>
+          <p class="mt-2 text-slate-600 leading-relaxed">Фантомний кубик — кубик 3×3 кольори якого проявляються під дією тепла людської руки</p>
+        </div>
+      </article>
+
+      <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
+        <a href="img/016-ball.jpg" data-lightbox="cubes" data-title="Magic Rainbow Ball" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-green/30 transition group-hover:ring-cube-green/60">
+          <img src="img/016-ball.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Magic Rainbow Ball" />
+        </a>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-display text-2xl font-semibold text-slate-900">Magic Rainbow Ball</h2>
+          <p class="mt-2 text-slate-600 leading-relaxed">Кулька-головоломка у вигляді м'яча з кольоровими кульками всередині</p>
+        </div>
+      </article>
+
+      <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
+        <a href="img/011.jpg" data-lightbox="cubes" data-title="Rubik's Keychain" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-slate-300/50 transition group-hover:ring-slate-400">
           <img src="img/011.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Rubik's Keychain" />
         </a>
         <div class="min-w-0 flex-1">
@@ -200,7 +215,61 @@
           <p class="mt-2 text-slate-600 leading-relaxed">Кубик Рубика 3x3 у вигляді брелка. Дуже швидко ламаються або губляться.</p>
         </div>
       </article>
+
+      <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
+        <a href="img/015-keychain-2.jpg" data-lightbox="cubes" data-title="MoFangGe Ivy Cube Keychain" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-blue/30 transition group-hover:ring-cube-blue/60">
+          <img src="img/015-keychain-2.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="MoFangGe Ivy Cube Keychain" />
+        </a>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-display text-2xl font-semibold text-slate-900">MoFangGe Ivy Cube Keychain</h2>
+          <p class="mt-2 text-slate-600 leading-relaxed">Брелок Ivy Cube від MoFangGe. Дуже швидко ламаються або губляться.</p>
+        </div>
+      </article>
+
+      <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
+        <a href="img/017-timer.jpg" data-lightbox="cubes" data-title="Speed Stacks G5 Timer" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-yellow/40 transition group-hover:ring-cube-yellow/70">
+          <img src="img/017-timer.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Speed Stacks G5 Timer" />
+        </a>
+        <div class="min-w-0 flex-1">
+          <h2 class="font-display text-2xl font-semibold text-slate-900">Speed Stacks G5 Timer</h2>
+          <p class="mt-2 text-slate-600 leading-relaxed">Таймер Speed Stacks G5 для спортивного складання кубиків Рубика</p>
+        </div>
+      </article>
     </main>
+
+    <section class="mt-16 space-y-6 sm:mt-20" aria-labelledby="non-rubik-heading">
+      <h2 id="non-rubik-heading" class="font-display text-center text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+        Інші головоломки
+      </h2>
+
+      <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
+        <a href="img/018-infinity.jpg" data-lightbox="cubes" data-title="Infinity Cube" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-orange/30 transition group-hover:ring-cube-orange/60">
+          <img src="img/018-infinity.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Infinity Cube" />
+        </a>
+        <div class="min-w-0 flex-1">
+          <h3 class="font-display text-2xl font-semibold text-slate-900">Infinity Cube</h3>
+          <p class="mt-2 text-slate-600 leading-relaxed">Infinity Cube з принтом галактики — нескінченний кубик-антистрес</p>
+        </div>
+      </article>
+
+      <article class="group flex flex-col gap-5 overflow-hidden rounded-3xl border-2 border-white/80 bg-white/90 p-5 shadow-lg shadow-violet-200/50 backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-300/40 sm:flex-row sm:items-start sm:p-6">
+        <a href="img/019-snake.jpg" data-lightbox="cubes" data-title="Rubik's Snake" class="block shrink-0 overflow-hidden rounded-2xl ring-4 ring-cube-red/30 transition group-hover:ring-cube-red/60">
+          <img src="img/019-snake.jpg" width="400" class="max-w-full h-auto transition duration-300 group-hover:scale-105" alt="Rubik's Snake" />
+        </a>
+        <div class="min-w-0 flex-1">
+          <h3 class="font-display text-2xl font-semibold text-slate-900">Rubik's Snake</h3>
+          <p class="mt-2 text-slate-600 leading-relaxed">Змійка Рубика — гнучка головоломка з чорно-білих сегментів</p>
+        </div>
+      </article>
+    </section>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    lightbox.option({
+      wrapAround: true,
+      albumLabel: 'Фото %1 з %2',
+    });
+  </script>
 </body>
 </html>
