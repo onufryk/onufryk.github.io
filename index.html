@@ -5,84 +5,87 @@
   <title>Маркові кубики Рубика</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <table class="table table-bordered table-sm table-responsive-sm">
-    <caption>Маркові кубики Рубика</caption>
-    <thead>
-      <tr>
-        <th>Фото</th>
-        <th>Назва</th>
-        <th>Подробиці</th>
-      </tr>
-    </thead>
-    <tr>
-      <td><a href="img/001.jpg"><img src="img/001.jpg" width=400/></a></td>
-      <td>Rubik's Mini</td>
-      <td>Зменшений кубик Рубика 2x2</td>
-    </tr>
-    <tr>
-      <td><a href="img/002.jpg"><img src="img/002.jpg" width=400/></a></td>
-      <td>Кубик Рубика (Rubik's Cube)</td>
-      <td>Стандартний кубик Рубика 3x3</td>
-    </tr>
-    <tr>
-      <td><a href="img/003.jpg"><img src="img/003.jpg" width=400/></a></td>
-      <td>Кубик Рубика (Rubik's Sensory Cube)</td>
-      <td>Стандартний кубик Рубика 3x3 із рельєфними поверхнями</td>
-    </tr>
-    <tr>
-      <td><a href="img/004.jpg"><img src="img/004.jpg" width=400/></a></td>
-      <td>Rubik's Master</td>
-      <td>Кубик Рубика 4x4</td>
-    </tr>
-    <tr>
-      <td><a href="img/006.jpg"><img src="img/006.jpg" width=400/></a></td>
-      <td>Rubik's Professor</td>
-      <td>Кубик Рубика 5x5</td>
-    </tr>
-    <tr>
-      <td><a href="img/005.jpg"><img src="img/005.jpg" width=400/></a></td>
-      <td>Піраміда Рубика (Rubik's Pyramid)</td>
-      <td>Піраміда Рубика</td>
-    </tr>
-    <tr>
-      <td><a href="img/007.jpg"><img src="img/007.jpg" width=400/></a></td>
-      <td>Windmill Cube</td>
-      <td>Кубик стандартного розміру із модифікованими елементами</td>
-    </tr>
-    <tr>
-      <td><a href="img/008.jpg"><img src="img/008.jpg" width=400/></a></td>
-      <td>Skewb Cube</td>
-      <td>Кубик стандартного розміру із модифікованими елементами</td>
-    </tr>
-    <tr>
-      <td><a href="img/009.jpg"><img src="img/009.jpg" width=400/></a></td>
-      <td>Axis Cube</td>
-      <td>Кубик стандартного розміру із модифікованими елементами</td>
-    </tr>
-    <tr>
-      <td><a href="img/010.jpg"><img src="img/010.jpg" width=400/></a></td>
-      <td>Megaminx</td>
-      <td>Головоломка у формі додекаедра</td>
-    </tr>
-    <tr>
-      <td><a href="img/012-mirror.jpg"><img src="img/012-mirror.jpg" width=400/></a></td>
-      <td>Mirror Cube <b>NEW!!!</b></td>
-      <td>Дзеркальний кубик</td>
-    </tr>
-    <tr>
-      <td><a href="img/013-gear.jpg"><img src="img/013-gear.jpg" width=400/></a></td>
-      <td>Gear Cube <b>NEW!!!</b></td>
-      <td>Шестеренчатий куб</td>
-    </tr>
-    <tr>
-      <td><a href="img/011.jpg"><img src="img/011.jpg" width=400/></a></td>
-      <td>Rubik's Keychain</td>
-      <td>Кубик Рубика 3x3 у вигляді брелка. Дуже швидко ламаються або губляться.</td>
-    </tr>
-  </table>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<body class="bg-white p-4 text-gray-900">
+  <div class="overflow-x-auto">
+    <table class="w-full border-collapse border border-gray-300 text-sm">
+      <caption class="caption-top mb-4 text-lg font-semibold">Маркові кубики Рубика</caption>
+      <thead class="bg-gray-100">
+        <tr>
+          <th class="border border-gray-300 px-3 py-2 text-left font-semibold">Фото</th>
+          <th class="border border-gray-300 px-3 py-2 text-left font-semibold">Назва</th>
+          <th class="border border-gray-300 px-3 py-2 text-left font-semibold">Подробиці</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/001.jpg"><img src="img/001.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Rubik's Mini</td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Зменшений кубик Рубика 2x2</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/002.jpg"><img src="img/002.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Кубик Рубика (Rubik's Cube)</td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Стандартний кубик Рубика 3x3</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/003.jpg"><img src="img/003.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Кубик Рубика (Rubik's Sensory Cube)</td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Стандартний кубик Рубика 3x3 із рельєфними поверхнями</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/004.jpg"><img src="img/004.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Rubik's Master</td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Кубик Рубика 4x4</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/006.jpg"><img src="img/006.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Rubik's Professor</td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Кубик Рубика 5x5</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/005.jpg"><img src="img/005.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Піраміда Рубика (Rubik's Pyramid)</td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Піраміда Рубика</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/007.jpg"><img src="img/007.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Windmill Cube</td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Кубик стандартного розміру із модифікованими елементами</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/008.jpg"><img src="img/008.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Skewb Cube</td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Кубик стандартного розміру із модифікованими елементами</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/009.jpg"><img src="img/009.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Axis Cube</td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Кубик стандартного розміру із модифікованими елементами</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/010.jpg"><img src="img/010.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Megaminx</td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Головоломка у формі додекаедра</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/012-mirror.jpg"><img src="img/012-mirror.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Mirror Cube <b>NEW!!!</b></td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Дзеркальний кубик</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/013-gear.jpg"><img src="img/013-gear.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Gear Cube <b>NEW!!!</b></td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Шестеренчатий куб</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-300 px-2 py-1 align-top"><a href="img/011.jpg"><img src="img/011.jpg" width="400" class="max-w-full h-auto" alt="" /></a></td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Rubik's Keychain</td>
+          <td class="border border-gray-300 px-2 py-1 align-top">Кубик Рубика 3x3 у вигляді брелка. Дуже швидко ламаються або губляться.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </body>
 </html>
